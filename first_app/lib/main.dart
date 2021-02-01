@@ -13,34 +13,37 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppSatte extends State<MyApp> {
+  final questions = const [
+    {
+      'questionText': 'what\s your favorate color ?',
+      'answers': ['white', 'Red', 'Blue', 'Green'],
+    },
+    {
+      'questionText': 'what\s your favorate day ?',
+      'answers': ['Sunday', 'Friday', 'Tuesday', 'Thusday'],
+    },
+    {
+      'questionText': 'what\s your favorate movie ?',
+      'answers': ['movie 1', 'movie 2', 'movie 3', 'movie 4'],
+    },
+    {
+      'questionText': 'what\s your favorate month ?',
+      'answers': ['Jan', 'Feb', 'Apr', 'Jun'],
+    }
+  ];
   var _questionIndex = 0;
   void _answerQuestion() {
     setState(() {
       _questionIndex = _questionIndex + 1;
     });
     print(_questionIndex);
+    if (_questionIndex > questions.length) {
+      print('we have more question...');
+    }
   }
 
   @override
   Widget build(BuildContext context) {
-    var questions = [
-      {
-        'questionText': 'what\s your favorate color ?',
-        'answers': ['white', 'Red', 'Blue', 'Green'],
-      },
-      {
-        'questionText': 'what\s your favorate day ?',
-        'answers': ['Sunday', 'Friday', 'Tuesday', 'Thusday'],
-      },
-      {
-        'questionText': 'what\s your favorate movie ?',
-        'answers': ['movie 1', 'movie 2', 'movie 3', 'movie 4'],
-      },
-      {
-        'questionText': 'what\s your favorate month ?',
-        'answers': ['Jan', 'Feb', 'Apr', 'Jun'],
-      }
-    ];
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
