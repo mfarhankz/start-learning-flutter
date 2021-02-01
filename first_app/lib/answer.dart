@@ -14,6 +14,7 @@ class Answer extends StatelessWidget {
         color: Colors.blue,
         child: Text(answerTest),
         onPressed: selectHandler,
+        textColor: Colors.white,
       ),
     );
   }
