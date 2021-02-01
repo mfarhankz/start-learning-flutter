@@ -37,9 +37,6 @@ class _MyAppSatte extends State<MyApp> {
       _questionIndex = _questionIndex + 1;
     });
     print(_questionIndex);
-    if (_questionIndex > questions.length) {
-      print('we have more question...');
-    }
   }
 
   @override
@@ -47,19 +44,23 @@ class _MyAppSatte extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('My First App'),
+          title: Text('Quiz App'),
         ),
-        body: Column(
-          children: [
-            Question(
-              questions[_questionIndex]['questionText'],
-            ),
-            ...(questions[_questionIndex]['answers'] as List<String>)
-                .map((answers) {
-              return Answer(_answerQuestion, answers);
-            }).toList()
-          ],
-        ),
+        body: _questionIndex < questions.length
+            ? Column(
+                children: [
+                  Question(
+                    questions[_questionIndex]['questionText'],
+                  ),
+                  ...(questions[_questionIndex]['answers'] as List<String>)
+                      .map((answers) {
+                    return Answer(_answerQuestion, answers);
+                  }).toList()
+                ],
+              )
+            : Center(
+                child: Text('Yes! you did it.'),
+              ),
       ),
     );
   }
