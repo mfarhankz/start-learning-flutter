@@ -18,18 +18,18 @@ class _MyAppSatte extends State<MyApp> {
       'questionText': 'what\s your favorate color ?',
       'answers': [
         {'text': 'white', 'score': 1},
-        {'text': 'Red', 'score': 5},
-        {'text': 'Black', 'score': 10},
-        {'text': 'Green', 'score': 8}
+        {'text': 'Red', 'score': 10},
+        {'text': 'Black', 'score': 20},
+        {'text': 'Green', 'score': 30}
       ],
     },
     {
       'questionText': 'what\s your favorate day ?',
       'answers': [
-        {'text': 'Sunday', 'score': 1},
-        {'text': 'Tuesday', 'score': 5},
-        {'text': 'Thusday', 'score': 10},
-        {'text': 'Friday', 'score': 8}
+        {'text': 'Sunday', 'score': 5},
+        {'text': 'Tuesday', 'score': 10},
+        {'text': 'Thusday', 'score': 30},
+        {'text': 'Friday', 'score': 15}
       ],
     },
     {

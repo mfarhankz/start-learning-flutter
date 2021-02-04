@@ -13,6 +13,8 @@ class Result extends StatelessWidget {
     } else if (resultScore > 10) {
       textValue = 'You are Excelent';
     } else if (resultScore > 19) {
+      textValue = 'You are very Good';
+    } else if (resultScore > 25) {
       textValue = 'You are Good';
     } else {
       textValue = 'You are Bad';
